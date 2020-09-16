@@ -4,9 +4,9 @@ Processing nanopore amplicon sequencing reads with reference sequence
 The alignment files are used to interrupt self-linked and chimeric reads to obtain more full-length amplicon sequences.
 ## Installation
 <pre><code>
-wget -c https://github.com/zxgsy520/map_paf2reads/archive/v1.0.0.tar.gz
-tar -zxvf v1.0.0.tar.gz
-cd map_paf2reads-1.0.0
+wget -c https://github.com/zxgsy520/map_paf2reads/archive/v1.1.0.tar.gz
+tar -zxvf v1.1.0.tar.gz
+cd map_paf2reads-1.1.0
  chmod 755 map_paf2reads
 </code></pre>
 or
@@ -27,7 +27,7 @@ attention:
     map_paf2reads -i input.sam -g genome.fa -p name
     minimap2 -secondary=no -c -x map-ont genome.fa reads.fastq|map_paf2reads -r reads.fastq -s identity_coverage.tsv >out_reads.fa
 
-version: 1.0.0
+version: 1.1.0
 contact:  Xingguo Zhang <113178210@qq.com>        
 
 optional arguments:
