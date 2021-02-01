@@ -2,6 +2,7 @@
 Processing nanopore amplicon sequencing reads with reference sequence
 
 The alignment files are used to interrupt self-linked and chimeric reads to obtain more full-length amplicon sequences.
+stat_full_len: Count the number of full-length reads with reference pairs
 ## Installation
 <pre><code>
 wget -c https://github.com/zxgsy520/map_paf2reads/archive/v1.1.0.tar.gz
