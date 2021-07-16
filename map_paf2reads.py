@@ -11,9 +11,9 @@ import argparse
 
 LOG = logging.getLogger(__name__)
 
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 __author__ = ("Xingguo Zhang",)
-__email__ = "113178210@qq.com"
+__email__ = "invicoun@foxmail.com"
 __all__ = []
 
 
@@ -30,7 +30,7 @@ def read_fasta(file):
     seq = ''
 
     for line in fp:
-        if type(line) == type(b''):
+        if isinstance(line, bytes):
             line = line.decode('utf-8')
         line = line.strip()
 
@@ -68,7 +68,7 @@ def read_fastq(file):
     seq = []
 
     for line in fp:
-        if type(line) == type(b''):
+        if isinstance(line, bytes):
             line = line.decode('utf-8')
         line = line.strip()
 
@@ -132,7 +132,7 @@ def read_paf(file, identity, coverage):
         rsite = [int(line[7]), int(line[8])]
         mlen = max(rsite)-min(rsite)
         match = [int(line[9]), int(line[10])]
-         
+
         similar =min(match) *100.0/max(match)
         lenratio = mlen*100.0/rlen
 
